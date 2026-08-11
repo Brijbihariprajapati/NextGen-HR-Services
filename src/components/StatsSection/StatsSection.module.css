@@ -1,0 +1,75 @@
+.wrap {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 1rem;
+}
+
+.overlap {
+  margin-top: -3.75rem;
+}
+
+.flat {
+  padding-top: clamp(3rem, 6vw, 4.5rem);
+}
+
+.panel {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  background: var(--surface-elevated);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 18px 44px rgba(10, 37, 64, 0.12);
+  overflow: hidden;
+  animation: fade-up 700ms var(--ease) both;
+}
+
+.stat {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border-right: 1px solid var(--line);
+}
+
+.stat:last-child {
+  border-right: none;
+}
+
+.value {
+  font-family: var(--font-display), "Outfit", sans-serif;
+  font-size: clamp(2rem, 3.5vw, 2.55rem);
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.045em;
+  margin-bottom: 0.4rem;
+}
+
+.label {
+  font-size: 0.84rem;
+  color: var(--muted);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 860px) {
+  .panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stat:nth-child(2) {
+    border-right: none;
+  }
+
+  .stat:nth-child(1),
+  .stat:nth-child(2) {
+    border-bottom: 1px solid var(--line);
+  }
+}
+
+@media (max-width: 520px) {
+  .overlap {
+    margin-top: -2.5rem;
+  }
+
+  .stat {
+    padding: 1.5rem 1rem;
+  }
+}

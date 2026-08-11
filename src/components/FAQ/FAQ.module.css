@@ -1,0 +1,107 @@
+.section {
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: start;
+}
+
+.intro {
+  position: sticky;
+  top: calc(var(--header-h) + 1.5rem);
+}
+
+.list {
+  display: grid;
+  border-top: 1px solid var(--line);
+}
+
+.item {
+  border-bottom: 1px solid var(--line);
+  border-left: 3px solid transparent;
+  padding-left: 0.35rem;
+  transition: border-left-color 200ms var(--ease), background-color 200ms var(--ease);
+}
+
+.item:has(.iconOpen) {
+  border-left-color: var(--accent);
+  background: linear-gradient(90deg, var(--accent-soft), transparent 40%);
+}
+
+.question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.35rem 0.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-display), "Outfit", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: var(--navy);
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  display: grid;
+  place-items: center;
+  font-size: 1.05rem;
+  color: var(--accent-deep);
+  transition:
+    transform 220ms var(--ease),
+    background-color 220ms var(--ease),
+    color 220ms var(--ease);
+}
+
+.iconOpen {
+  transform: rotate(45deg);
+  background: var(--accent);
+  color: var(--white);
+  border-color: var(--accent);
+}
+
+.answerWrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 260ms var(--ease);
+}
+
+.answerWrapOpen {
+  grid-template-rows: 1fr;
+}
+
+.answer {
+  min-height: 0;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 0.98rem;
+  padding-right: 2.5rem;
+}
+
+.answerWrapOpen .answer {
+  padding-bottom: 1.3rem;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .intro {
+    position: static;
+  }
+}

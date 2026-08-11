@@ -1,0 +1,89 @@
+.footer {
+  margin-top: auto;
+  background:
+    linear-gradient(180deg, rgba(27, 108, 168, 0.18), transparent 35%),
+    linear-gradient(90deg, var(--navy), #0d3358 70%, #0f4a5c);
+  color: rgba(255, 255, 255, 0.78);
+  padding: 4.5rem 0 1.5rem;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1.15fr 1.6fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logoImage {
+  width: 168px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 1.4rem;
+}
+
+.copy {
+  max-width: 26rem;
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.7;
+  font-size: 0.98rem;
+}
+
+.linkGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.heading {
+  font-family: var(--font-display), "Outfit", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1rem;
+}
+
+.list {
+  display: grid;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+}
+
+.list a {
+  color: rgba(255, 255, 255, 0.72);
+  transition: color 160ms var(--ease);
+}
+
+.list a:hover {
+  color: var(--white);
+}
+
+.bottom {
+  padding-top: 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.86rem;
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.assurance {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+@media (max-width: 900px) {
+  .top {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .linkGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

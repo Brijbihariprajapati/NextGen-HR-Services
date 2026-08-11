@@ -1,0 +1,13 @@
+.body {
+  font-family: var(--font-body), "Plus Jakarta Sans", "Segoe UI", sans-serif;
+}
+
+.shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}

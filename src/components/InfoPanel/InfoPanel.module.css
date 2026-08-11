@@ -1,0 +1,108 @@
+.panel {
+  position: sticky;
+  top: calc(var(--header-h) + var(--topbar-h) + 1.5rem);
+  padding: 1.85rem;
+  background:
+    linear-gradient(160deg, rgba(27, 108, 168, 0.35), transparent 45%),
+    linear-gradient(320deg, rgba(15, 118, 110, 0.28), transparent 40%),
+    var(--navy);
+  color: rgba(255, 255, 255, 0.85);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(125, 211, 252, 0.8);
+  margin-bottom: 0.6rem;
+}
+
+.title {
+  color: var(--white);
+  font-family: var(--font-display), "Outfit", sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: -0.035em;
+  margin-bottom: 1.5rem;
+}
+
+.steps {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.85rem;
+}
+
+.num {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  display: grid;
+  place-items: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: rgba(125, 211, 252, 0.18);
+  color: #7dd3fc;
+}
+
+.step:nth-child(2) .num {
+  background: rgba(94, 234, 212, 0.18);
+  color: #5eead4;
+}
+
+.step:nth-child(3) .num {
+  background: rgba(252, 211, 77, 0.18);
+  color: #fcd34d;
+}
+
+.step:nth-child(4) .num {
+  background: rgba(196, 181, 253, 0.18);
+  color: #c4b5fd;
+}
+
+.stepTitle {
+  font-weight: 600;
+  color: var(--white);
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.stepDescription {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.highlight {
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.highlightValue {
+  font-family: var(--font-display), "Outfit", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: #7dd3fc;
+}
+
+.highlightLabel {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+@media (max-width: 900px) {
+  .panel {
+    position: static;
+  }
+}

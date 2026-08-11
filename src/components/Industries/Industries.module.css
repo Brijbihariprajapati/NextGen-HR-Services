@@ -1,0 +1,113 @@
+.section {
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.intro {
+  margin-bottom: 2.25rem;
+  max-width: 40rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.item {
+  --tone: var(--accent);
+  --tone-soft: var(--accent-soft);
+
+  display: flex;
+  align-items: center;
+  gap: 0.95rem;
+  padding: 1.15rem 1.2rem;
+  background: var(--surface-elevated);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(10, 37, 64, 0.03);
+  animation: fade-up 550ms var(--ease) both;
+  transition:
+    border-color 200ms var(--ease),
+    box-shadow 200ms var(--ease),
+    transform 200ms var(--ease);
+}
+
+.item:hover {
+  border-color: rgba(10, 37, 64, 0.16);
+  box-shadow: 0 10px 28px rgba(10, 37, 64, 0.07);
+  transform: translateY(-2px);
+}
+
+.mark {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--tone-soft);
+  color: var(--tone);
+}
+
+.title {
+  font-family: var(--font-display), "Outfit", sans-serif;
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+.blue {
+  --tone: #1b6ca8;
+  --tone-soft: rgba(27, 108, 168, 0.1);
+}
+
+.slate {
+  --tone: #475569;
+  --tone-soft: rgba(71, 85, 105, 0.1);
+}
+
+.teal {
+  --tone: #0f766e;
+  --tone-soft: rgba(15, 118, 110, 0.1);
+}
+
+.rose {
+  --tone: #be185d;
+  --tone-soft: rgba(190, 24, 93, 0.09);
+}
+
+.amber {
+  --tone: #b45309;
+  --tone-soft: rgba(180, 83, 9, 0.1);
+}
+
+.indigo {
+  --tone: #4338ca;
+  --tone-soft: rgba(67, 56, 202, 0.09);
+}
+
+.orange {
+  --tone: #c2410c;
+  --tone-soft: rgba(194, 65, 12, 0.1);
+}
+
+.violet {
+  --tone: #6d28d9;
+  --tone-soft: rgba(109, 40, 217, 0.09);
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

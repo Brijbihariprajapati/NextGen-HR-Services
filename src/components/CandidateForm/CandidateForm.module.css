@@ -1,0 +1,135 @@
+.form {
+  padding: clamp(1.85rem, 3.5vw, 2.6rem);
+  background: var(--surface-elevated);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  animation: fade-up 650ms var(--ease) both;
+}
+
+.intro {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.35rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.title {
+  font-family: var(--font-display), "Outfit", sans-serif;
+  font-size: clamp(1.5rem, 2.7vw, 1.9rem);
+  letter-spacing: -0.035em;
+  margin-bottom: 0.45rem;
+}
+
+.lead {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem;
+  margin-bottom: 1.1rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.field span,
+.uploadLabel {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--slate);
+}
+
+.field input,
+.field select {
+  width: 100%;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: 0.9rem 1rem;
+  color: var(--navy);
+  outline: none;
+  transition:
+    border-color 160ms var(--ease),
+    box-shadow 160ms var(--ease),
+    background-color 160ms var(--ease);
+}
+
+.field input::placeholder {
+  color: var(--muted-soft);
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: var(--accent);
+  background: var(--white);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.upload {
+  display: grid;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+
+.upload input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.uploadBox {
+  display: grid;
+  gap: 0.2rem;
+  padding: 1.2rem 1.05rem;
+  border: 1px dashed rgba(27, 108, 168, 0.45);
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+  transition:
+    border-color 160ms var(--ease),
+    background-color 160ms var(--ease);
+}
+
+.upload:hover .uploadBox,
+.upload:focus-within .uploadBox {
+  border-color: var(--accent);
+  background: rgba(27, 108, 168, 0.1);
+}
+
+.uploadBox strong {
+  color: var(--navy);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.uploadBox em {
+  font-style: normal;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.success {
+  color: var(--accent-deep);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

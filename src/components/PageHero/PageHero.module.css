@@ -1,0 +1,33 @@
+.hero {
+  background:
+    linear-gradient(120deg, rgba(27, 108, 168, 0.28), transparent 42%),
+    linear-gradient(300deg, rgba(15, 118, 110, 0.22), transparent 38%),
+    linear-gradient(180deg, var(--navy) 0%, var(--navy-mid) 100%);
+  color: var(--white);
+  padding: clamp(3.5rem, 7vw, 5rem) 0;
+}
+
+.inner {
+  animation: fade-up 600ms var(--ease) both;
+}
+
+.copy {
+  max-width: 40rem;
+}
+
+.title {
+  font-family: var(--font-display), "Outfit", sans-serif;
+  color: var(--white);
+  font-size: clamp(2.2rem, 4.2vw, 3.15rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  margin-bottom: 0.9rem;
+}
+
+.description {
+  max-width: 36rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.06rem;
+  line-height: 1.72;
+  letter-spacing: -0.01em;
+}
