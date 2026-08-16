@@ -1,0 +1,174 @@
+.wrap {
+  padding-top: clamp(3.5rem, 7vw, 5.5rem);
+}
+
+.head {
+  max-width: 42rem;
+  margin-bottom: 2.25rem;
+  animation: fade-up 600ms var(--ease) both;
+}
+
+.list {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--line-strong);
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 2.25rem 1fr;
+  gap: 1.15rem;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--line);
+  align-items: start;
+  animation: fade-up 600ms var(--ease) both;
+}
+
+.index {
+  box-sizing: border-box;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-top: 0.1rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display), "Outfit", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.itemTitle {
+  font-family: var(--font-display), "Outfit", sans-serif;
+  font-size: 1.22rem;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.55rem;
+  color: var(--navy);
+}
+
+.itemCopy {
+  max-width: 46rem;
+  color: var(--muted);
+  line-height: 1.78;
+  font-size: 1rem;
+}
+
+.band {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(3.5rem, 7.5vw, 5.25rem) 0;
+  background:
+    radial-gradient(800px 360px at 90% 20%, rgba(27, 108, 168, 0.28), transparent 55%),
+    radial-gradient(700px 300px at 5% 90%, rgba(15, 118, 110, 0.2), transparent 50%),
+    var(--navy);
+  color: var(--white);
+}
+
+.bandInner {
+  max-width: 46rem;
+  animation: fade-up 650ms var(--ease) both;
+}
+
+.bandEyebrow {
+  margin-bottom: 0.85rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(125, 211, 252, 0.8);
+}
+
+.bandTitle {
+  font-family: var(--font-display), "Outfit", sans-serif;
+  color: var(--white);
+  font-size: clamp(1.8rem, 3.3vw, 2.5rem);
+  letter-spacing: -0.04em;
+  margin-bottom: 1rem;
+  line-height: 1.15;
+}
+
+.bandCopy {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.08rem;
+  line-height: 1.78;
+}
+
+.split {
+  padding-top: clamp(3.5rem, 7vw, 5.5rem);
+}
+
+.splitHead {
+  max-width: 44rem;
+  margin-bottom: 2.5rem;
+  animation: fade-up 600ms var(--ease) both;
+}
+
+.splitBody {
+  margin-top: 1rem;
+  max-width: 40rem;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.splitList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 2.5rem;
+  border-top: 1px solid var(--line-strong);
+  animation: fade-up 700ms var(--ease) both;
+}
+
+.splitList li {
+  display: grid;
+  grid-template-columns: 2.25rem 1fr;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--line);
+  align-items: start;
+}
+
+.splitIndex {
+  box-sizing: border-box;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-top: 0.1rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display), "Outfit", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.splitList strong {
+  display: block;
+  font-family: var(--font-display), "Outfit", sans-serif;
+  font-size: 1.12rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--navy);
+  margin-bottom: 0.4rem;
+}
+
+.splitList span:last-child {
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.72;
+}
+
+@media (max-width: 860px) {
+  .splitList {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

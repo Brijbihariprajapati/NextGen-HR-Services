@@ -16,8 +16,16 @@ export default function StatsSection({ overlap = true }: StatsSectionProps) {
         <div className={styles.panel}>
           {stats.map((stat) => (
             <div key={stat.label} className={styles.stat}>
-              <p className={styles.value}>
-                <Counter value={stat.value} suffix={stat.suffix} />
+              <p
+                className={`${styles.value}${
+                  typeof stat.value !== "number" ? ` ${styles.valueText}` : ""
+                }`}
+              >
+                {typeof stat.value === "number" ? (
+                  <Counter value={stat.value} suffix={stat.suffix} />
+                ) : (
+                  stat.text
+                )}
               </p>
               <p className={styles.label}>{stat.label}</p>
             </div>

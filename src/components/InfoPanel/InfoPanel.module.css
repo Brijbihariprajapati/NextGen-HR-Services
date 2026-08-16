@@ -36,20 +36,26 @@
 
 .step {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.85rem;
+  grid-template-columns: 2rem 1fr;
+  gap: 0.9rem;
+  align-items: start;
 }
 
 .num {
-  flex-shrink: 0;
-  width: 26px;
-  height: 26px;
+  box-sizing: border-box;
+  width: 2rem;
+  height: 2rem;
+  margin-top: 0.1rem;
   border-radius: 50%;
   border: 1px solid transparent;
-  display: grid;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display), "Outfit", sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
   background: rgba(125, 211, 252, 0.18);
   color: #7dd3fc;
 }

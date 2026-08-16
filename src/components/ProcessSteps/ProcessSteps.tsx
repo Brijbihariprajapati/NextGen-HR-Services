@@ -1,21 +1,27 @@
+import Image from "next/image";
+import { pageMedia } from "@/data/pageMedia";
 import styles from "./ProcessSteps.module.css";
 
 const steps = [
   {
     title: "Understand the brief",
     copy: "We map role requirements, team context, timelines, and success criteria with precision.",
+    image: pageMedia.processSteps[0],
   },
   {
     title: "Source & screen",
     copy: "Targeted outreach and structured screening to shortlist candidates who fit both skill and culture.",
+    image: pageMedia.processSteps[1],
   },
   {
     title: "Interview & evaluate",
     copy: "Coordinated interview loops with clear feedback so decisions stay fast and informed.",
+    image: pageMedia.processSteps[2],
   },
   {
     title: "Offer & close",
     copy: "Offer support and onboarding handoff to help secure the right hire with confidence.",
+    image: pageMedia.processSteps[3],
   },
 ];
 
@@ -35,7 +41,16 @@ export default function ProcessSteps() {
         <ol className={styles.list}>
           {steps.map((step, index) => (
             <li key={step.title} className={styles.item}>
-              <span className={styles.num}>{String(index + 1).padStart(2, "0")}</span>
+              <div className={styles.media}>
+                <Image
+                  src={step.image.src}
+                  alt={step.image.alt}
+                  fill
+                  className={styles.image}
+                  sizes="(max-width: 980px) 50vw, 25vw"
+                />
+                <span className={styles.num}>{String(index + 1).padStart(2, "0")}</span>
+              </div>
               <h3 className={styles.title}>{step.title}</h3>
               <p className={styles.copy}>{step.copy}</p>
             </li>

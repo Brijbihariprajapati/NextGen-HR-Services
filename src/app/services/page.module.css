@@ -1,3 +1,9 @@
 .section {
-  padding-top: 2rem;
+  padding-top: clamp(3.25rem, 6vw, 5rem);
+}
+
+.head {
+  max-width: 40rem;
+  margin-bottom: clamp(2rem, 4vw, 2.75rem);
+  animation: fade-up 600ms var(--ease) both;
 }

@@ -1,5 +1,7 @@
 .section {
-  background: var(--surface);
+  background:
+    radial-gradient(700px 280px at 10% 0%, rgba(27, 108, 168, 0.05), transparent 55%),
+    var(--surface);
   border-top: 1px solid var(--line);
 }
 
@@ -52,18 +54,22 @@
 
 .icon {
   flex-shrink: 0;
-  width: 28px;
-  height: 28px;
+  box-sizing: border-box;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   border: 1px solid var(--line-strong);
-  display: grid;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.05rem;
+  line-height: 1;
   color: var(--accent-deep);
   transition:
     transform 220ms var(--ease),
     background-color 220ms var(--ease),
-    color 220ms var(--ease);
+    color 220ms var(--ease),
+    border-color 220ms var(--ease);
 }
 
 .iconOpen {

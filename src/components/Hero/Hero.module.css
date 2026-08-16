@@ -14,7 +14,7 @@
 
 .image {
   object-fit: cover;
-  object-position: center 28%;
+  object-position: center 40%;
   animation: soft-pan 10s var(--ease) forwards;
 }
 
@@ -30,6 +30,23 @@
       rgba(10, 37, 64, 0.35) 100%
     ),
     linear-gradient(180deg, rgba(10, 37, 64, 0.1) 0%, rgba(10, 37, 64, 0.55) 100%);
+}
+
+.aura {
+  position: absolute;
+  inset: auto -8% -30% auto;
+  width: min(55vw, 38rem);
+  height: min(55vw, 38rem);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(27, 108, 168, 0.32) 0%,
+    rgba(15, 118, 110, 0.16) 45%,
+    transparent 72%
+  );
+  pointer-events: none;
+  filter: blur(10px);
+  animation: fade-in 1.4s var(--ease) both;
 }
 
 .content {

@@ -1,26 +1,23 @@
 .list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.1rem;
+  gap: 0;
+  border-top: 1px solid var(--line-strong);
 }
 
 .item {
-  padding: 1.6rem 1.5rem;
-  background: var(--surface-elevated);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  box-shadow: 0 1px 2px rgba(10, 37, 64, 0.03);
+  padding: 1.55rem 0;
+  border-bottom: 1px solid var(--line);
   animation: fade-up 600ms var(--ease) both;
-  transition:
-    border-color 200ms var(--ease),
-    box-shadow 200ms var(--ease),
-    transform 200ms var(--ease);
 }
 
-.item:hover {
-  border-color: rgba(27, 108, 168, 0.28);
-  box-shadow: 0 12px 32px rgba(10, 37, 64, 0.08);
-  transform: translateY(-2px);
+.item:nth-child(odd) {
+  padding-right: 1.5rem;
+  border-right: 1px solid var(--line);
+}
+
+.item:nth-child(even) {
+  padding-left: 1.5rem;
 }
 
 .label {
@@ -51,5 +48,12 @@ a.value:hover {
 @media (max-width: 700px) {
   .list {
     grid-template-columns: 1fr;
+  }
+
+  .item:nth-child(odd),
+  .item:nth-child(even) {
+    padding-left: 0;
+    padding-right: 0;
+    border-right: none;
   }
 }

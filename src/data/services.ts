@@ -30,16 +30,10 @@ export const services: ServiceItem[] = [
       "End-to-end permanent placement with role mapping, screening, and offer closure support.",
   },
   {
-    id: "contract-staffing",
-    title: "Contract Staffing",
+    id: "contract-c2h",
+    title: "Contract & C2H Hiring",
     description:
-      "Flexible contract talent for project spikes, seasonal demand, and specialized short-term needs.",
-  },
-  {
-    id: "c2h-hiring",
-    title: "C2H Hiring",
-    description:
-      "Contract-to-hire models that reduce risk while helping teams validate fit before conversion.",
+      "Flexible contract staffing and contract-to-hire models for project spikes, seasonal demand, and risk-free conversion.",
   },
   {
     id: "bulk-hiring",

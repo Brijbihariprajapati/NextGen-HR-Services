@@ -21,7 +21,7 @@ export const faqs: Faq[] = [
     id: "faq-3",
     question: "Do you support bulk and contract hiring?",
     answer:
-      "Yes. Alongside permanent hiring, we support contract staffing, C2H (contract-to-hire), bulk hiring drives, and RPO-style embedded recruitment support.",
+      "Yes. Alongside permanent hiring, we support contract & C2H (contract-to-hire) staffing, bulk hiring drives, and RPO-style embedded recruitment support.",
   },
   {
     id: "faq-4",

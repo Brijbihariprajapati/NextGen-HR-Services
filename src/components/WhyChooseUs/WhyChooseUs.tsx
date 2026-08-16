@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { pageMedia } from "@/data/pageMedia";
 import styles from "./WhyChooseUs.module.css";
 
 const points = [
@@ -21,9 +23,20 @@ const points = [
 
 export default function WhyChooseUs() {
   return (
-    <section className={`section ${styles.section}`}>
-      <div className={`container ${styles.grid}`}>
-        <div>
+    <section className={styles.section}>
+      <div className={styles.bg} aria-hidden="true">
+        <Image
+          src={pageMedia.whyChooseUs.src}
+          alt=""
+          fill
+          className={styles.bgImage}
+          sizes="100vw"
+        />
+        <div className={styles.bgOverlay} />
+      </div>
+
+      <div className={`container ${styles.inner}`}>
+        <div className={styles.intro}>
           <p className="eyebrow">Why NextGen</p>
           <h2 className="section-title">Built for trust on both sides of hiring</h2>
           <p className={`section-lead ${styles.lead}`}>

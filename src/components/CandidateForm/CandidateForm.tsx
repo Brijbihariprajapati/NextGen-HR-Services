@@ -48,7 +48,8 @@ export default function CandidateForm() {
       <div className={styles.intro}>
         <h2 className={styles.title}>Looking for your next opportunity?</h2>
         <p className={styles.lead}>
-          Share your profile and resume — we will match you with relevant roles.
+          Share your profile and resume — we match you with relevant roles across
+          IT, non-IT, and manufacturing, and guide you through interviews.
         </p>
       </div>
 
@@ -121,6 +122,11 @@ export default function CandidateForm() {
           onChange={handleFileChange}
         />
       </label>
+
+      <p className={styles.privacy}>
+        Your resume will be used solely for recruitment and job-matching
+        purposes. We do not sell candidate information to third parties.
+      </p>
 
       <div className={styles.actions}>
         <Button type="submit">Submit Resume</Button>

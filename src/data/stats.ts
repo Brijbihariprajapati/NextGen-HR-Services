@@ -1,12 +1,13 @@
 export type StatItem = {
-  value: number;
-  suffix: string;
+  value?: number;
+  suffix?: string;
+  text?: string;
   label: string;
 };
 
 export const stats: StatItem[] = [
-  { value: 500, suffix: "+", label: "Successful placements" },
-  { value: 120, suffix: "+", label: "Client companies served" },
-  { value: 15, suffix: "+", label: "Industries covered" },
-  { value: 98, suffix: "%", label: "Client retention rate" },
+  { value: 8, suffix: "+", label: "Recruitment Services" },
+  { value: 3, label: "Core Hiring Domains" },
+  { text: "Pan-India", label: "Recruitment" },
+  { text: "Permanent & Contract", label: "Hiring" },
 ];
